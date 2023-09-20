@@ -298,3 +298,45 @@ document.getElementById("operation").addEventListener("change", () => {
 document.getElementById("calculate").addEventListener("click", calculate);
 
 let button = document.getElementById("calculate");
+
+function fillRandomNumbers() {
+  let range = prompt(
+    "Digite o intervalo de valores no formato: min, max",
+    "-10, 10"
+  );
+  let [min, max] = range.split(",").map(Number);
+
+  const rows1 = document.getElementById("rows1").value;
+  const cols1 = document.getElementById("cols1").value;
+  const rows2 = document.getElementById("rows2").value;
+  const cols2 = document.getElementById("cols2").value;
+
+  if (rows1 === "" || cols1 === "" || rows2 === "" || cols2 === "") {
+    alert(
+      "Por favor, defina as dimensões das matrizes antes de preenchê-las aleatoriamente."
+    );
+    return;
+  }
+
+  // Obtém todas as células de entrada das tabelas
+  const matrix1Cells = document.getElementsByClassName("matrix1");
+  const matrix2Cells = document.getElementsByClassName("matrix2");
+
+  if (matrix1Cells.length === 0 || matrix2Cells.length === 0) {
+    alert(
+      "As tabelas das matrizes não estão presentes na tela. Clique em 'Gerar Matrizes' primeiro."
+    );
+    return;
+  }
+  // Preenche as células com números aleatórios
+  for (const cell of matrix1Cells) {
+    cell.value = Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  for (const cell of matrix2Cells) {
+    cell.value = Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+}
+document
+  .getElementById("fillRandomButton")
+  .addEventListener("click", fillRandomNumbers);
