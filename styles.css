@@ -32,7 +32,7 @@ input {
   outline-color: #d8670b;
   padding: 5px 10px;
   border-radius: 8px;
-  min-width: 6rem;
+  min-width: 100px;
   text-align: center;
   font-family: Poppins;
   font-weight: 500;
@@ -176,11 +176,20 @@ input[type="number"] {
   }
   .matrices-order {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .lottie {
     width: 100%;
   }
   h1 {
     font-size: 1em;
+  }
+  input {
+    min-width: 90px;
+  }
+
+  #matrices input {
+    min-width: 70px;
   }
 }
