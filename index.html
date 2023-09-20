@@ -8,18 +8,14 @@
     <link rel="stylesheet" href="button.css" />
     <link rel="shortcut icon" href="./assets/matrix.png" type="image/x-icon" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-
     <script defer type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script
-  defer
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-></script>
-
-    
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script
+      defer
+      type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
   </head>
   <body class="flex flex-col">
     <header class="flex justify-center">
@@ -54,7 +50,7 @@
         ></lottie-player>
       </div>
 
-      <div class="flex gap items-center flex-wrap">
+      <div class="flex gap items-center flex-wrap mb-4">
         <span>Operação:</span>
         <select id="operation">
           <option value="add">Soma</option>
