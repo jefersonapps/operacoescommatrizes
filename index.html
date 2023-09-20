@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrizes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link rel="shortcut icon" href="./assets/matrix.png" type="image/x-icon" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script
+      defer
+      type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
+  </head>
+  <body class="flex flex-col">
+    <header class="flex justify-center">
+      <div class="flex gap items-center">
+        <img
+          style="width: 40px; height: 40px; margin-right: 10px"
+          src="./assets/matrix.png"
+          alt="matriz"
+        />
+        <h1>Operações entre matrizes</h1>
+      </div>
+    </header>
+    <main>
+      <div class="flex gap items-center mt-4 flex-wrap">
+        <span>Ordem da matriz A:</span>
+        <input id="rows1" type="number" placeholder="Linhas" />
+        <input id="cols1" type="number" placeholder="Colunas" />
+        <span>Ordem da matriz B: </span>
+        <input id="rows2" type="number" placeholder="Linhas" />
+        <input id="cols2" type="number" placeholder="Colunas" />
+        <button class="button" id="generateMatrices">Gerar Matrizes</button>
+      </div>
+
+      <div id="matrices">
+        <lottie-player
+          src="https://lottie.host/676e2bba-5092-45fa-add8-aa721226fef8/JCkWfCBI3v.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+
+      <div class="flex gap items-center flex-wrap">
+        <span>Operação:</span>
+        <select id="operation">
+          <option value="add">Soma</option>
+          <option value="subtract">Subtração</option>
+          <option value="multiply">Multiplicação</option>
+        </select>
+
+        <button class="button" id="calculate">Calcular</button>
+      </div>
+
+      <div class="center h-fit">
+        <div id="name-matrix-c"></div>
+        <div id="result-container">
+          <div id="result"></div>
+        </div>
+      </div>
+      <div id="step-by-step"></div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

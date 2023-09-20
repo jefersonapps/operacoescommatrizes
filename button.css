@@ -1,0 +1,21 @@
+.button {
+  font-family: Poppins, sans-serif;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #5e55bb;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #4f489e;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
