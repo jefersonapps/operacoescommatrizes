@@ -45,7 +45,7 @@ function updateOperationSymbol() {
       : document.getElementById("operation").value == "subtract"
       ? "$-$"
       : "$\\times$";
-  MathJax.Hub.Queue(["Typeset", MathJax.Hub, operationSymbol]);
+  MathJax?.Hub.Queue(["Typeset", MathJax?.Hub, operationSymbol]);
 }
 
 function clearResult() {
@@ -152,7 +152,7 @@ function calculate() {
   resultContainerDiv.classList.add("result-container");
   const nameMatrixC = document.getElementById("name-matrix-c");
   nameMatrixC.innerHTML = "$C=$";
-  MathJax.Hub.Queue(["Typeset", MathJax.Hub, nameMatrixC]);
+  MathJax?.Hub.Queue(["Typeset", MathJax?.Hub, nameMatrixC]);
   updateStepByStep(operation, matrix1Cells, matrix2Cells);
 }
 
@@ -285,7 +285,7 @@ function updateStepByStep(operation, matrix1Cells, matrix2Cells) {
     stepByStepDiv.innerHTML += "</ol>";
   }
 
-  MathJax.Hub.Queue(["Typeset", MathJax.Hub, stepByStepDiv]);
+  MathJax?.Hub.Queue(["Typeset", MathJax?.Hub, stepByStepDiv]);
 }
 
 document
