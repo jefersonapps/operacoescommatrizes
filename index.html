@@ -6,17 +6,17 @@
     <title>Matrizes</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="button.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="shortcut icon" href="./assets/matrix.png" type="image/x-icon" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-   <script defer type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script
-  defer
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-></script>
-
+    <script defer type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    ></script>
   </head>
   <body class="flex flex-col">
     <header class="flex justify-center">
@@ -38,6 +38,10 @@
         <input id="rows2" type="number" placeholder="Linhas" /> x
         <input id="cols2" type="number" placeholder="Colunas" />
         <button class="button" id="generateMatrices">Gerar Matrizes</button>
+        <button id="fillRandomButton" class="button items-center gap">
+          <i data-lucide="sparkles" style="width: 20px"></i>
+          Preencher Aleatoriamente
+        </button>
       </div>
 
       <div id="matrices">
@@ -51,7 +55,7 @@
         ></lottie-player>
       </div>
 
-      <div class="flex gap items-center flex-wrap mb-4">
+      <div class="flex gap items-center flex-wrap">
         <span>Operação:</span>
         <select id="operation">
           <option value="add">Soma</option>
@@ -62,7 +66,7 @@
         <button class="button" id="calculate">Calcular</button>
       </div>
 
-      <div class="center h-fit" style="padding-top:10px">
+      <div class="center h-fit">
         <div id="name-matrix-c"></div>
         <div id="result-container">
           <div id="result"></div>
@@ -72,5 +76,8 @@
     </main>
 
     <script type="module" src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
