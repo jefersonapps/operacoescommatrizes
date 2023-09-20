@@ -53,10 +53,6 @@ span {
   flex-wrap: wrap;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -124,6 +120,7 @@ input[type="number"] {
 }
 .result-container {
   position: relative;
+  margin-top: 20px;
 }
 .result-container:before,
 .result-container:after {
