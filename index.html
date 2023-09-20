@@ -33,13 +33,17 @@
       <div class="flex gap items-center mt-4 flex-wrap">
         <span>Ordem da matriz A:</span>
         <div class="matrices-order">
-          <input id="rows1" type="number" placeholder="Linhas" /> x
-          <input id="cols1" type="number" placeholder="Colunas" />
+          <div>
+            <input id="rows1" type="number" placeholder="Linhas" /> x
+            <input id="cols1" type="number" placeholder="Colunas" />
+          </div>
         </div>
         <span>Ordem da matriz B: </span>
         <div class="matrices-order">
-          <input id="rows2" type="number" placeholder="Linhas" /> x
-          <input id="cols2" type="number" placeholder="Colunas" />
+          <div>
+            <input id="rows2" type="number" placeholder="Linhas" /> x
+            <input id="cols2" type="number" placeholder="Colunas" />
+          </div>
         </div>
         <button class="button" id="generateMatrices">Gerar Matrizes</button>
         <button id="fillRandomButton" class="button items-center gap">
@@ -78,6 +82,7 @@
       </div>
       <div id="step-by-step"></div>
     </main>
+    <br />
 
     <script type="module" src="script.js"></script>
     <script>
