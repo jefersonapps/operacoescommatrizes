@@ -222,9 +222,9 @@ function updateStepByStep(operation, matrix1Cells, matrix2Cells) {
         const result = num1 + num2;
         stepByStepDiv.innerHTML += `<li>Soma para obter o elemento na posição $c_{${
           i + 1
-        }${
-          j + 1
-        }}$ = <span class="math-tex-inline">$$${num1} + ${num2} = ${result}$$</span></li>`;
+        }${j + 1}}$ = <span class="math-tex-inline">$$${
+          num1 >= 0 ? num1 : "(" + num1 + ")"
+        } + ${num2 >= 0 ? num2 : "(" + num2 + ")"} = ${result}$$</span></li>`;
       }
     }
     stepByStepDiv.innerHTML += "</ol>";
@@ -238,9 +238,9 @@ function updateStepByStep(operation, matrix1Cells, matrix2Cells) {
         const result = num1 - num2;
         stepByStepDiv.innerHTML += `<li>Subtração para obter o elemento na posição $c_{${
           i + 1
-        }${
-          j + 1
-        }}$ = <span class="math-tex-inline">$$${num1} - ${num2} = ${result}$$</span></li>`;
+        }${j + 1}}$ = <span class="math-tex-inline">$$${
+          num1 >= 0 ? num1 : "(" + num1 + ")"
+        } - ${num2 >= 0 ? num2 : "(" + num2 + ")"} = ${result}$$</span></li>`;
       }
     }
     stepByStepDiv.innerHTML += "</ol>";
@@ -266,7 +266,9 @@ function updateStepByStep(operation, matrix1Cells, matrix2Cells) {
           if (k > 0) {
             sumString += " + ";
           }
-          sumString += `${num1} \\times ${num2}`;
+          sumString += `${num1 >= 0 ? num1 : "(" + num1 + ")"} \\times ${
+            num2 >= 0 ? num2 : "(" + num2 + ")"
+          }`;
         }
 
         let sum = 0;
